@@ -1,6 +1,6 @@
 var pigLatin = function(word) {
   var vowelsRegEx = /^[aeiou]/i;
-  var consonantsRegEx = /^([bcdfghjklmnpqrstvwxyz]+u*)(\w+)/i;
+  var consonantsRegEx = /^([bcdfghjklmnpqrstvwxz]+u*|y)(\w+)/i;
   var pigLatinWord = "";
 
   if (vowelsRegEx.test(word)) {
