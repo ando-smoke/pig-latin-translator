@@ -6,7 +6,7 @@ Takes in a word or sentence from the user and translates it into pig latin.
 Installation
 ------------
 
-To run the primary application,
+Clone this project onto your local system and open the enclosed pig-latin.html in your preferred web browser.
 
 Usage
 -----
