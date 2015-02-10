@@ -23,3 +23,13 @@ describe('pigLatin', function() {
     expect(pigLatin("yellow")).to.equal("ellowyay");
   });
 });
+
+describe('pigLatinSentence', function() {
+  it('takes a sentence and returns the sentence in pig latin', function() {
+    expect(pigLatinSentence("How now brown cow")).to.equal("owhay ownay ownbray owcay");
+  });
+
+  it('takes a sentence and returns the sentence in pig latin (ending punctuation considered)', function() {
+    expect(pigLatinSentence("Hello, kind sir!")).to.equal("ellohay, indkay irsay!");
+  });
+});

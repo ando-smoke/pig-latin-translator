@@ -1,13 +1,20 @@
 var pigLatin = function(word) {
-  var vowelsRegEx = /^[aeiou]/i;
-  var consonantsRegEx = /^([bcdfghjklmnpqrstvwxz]+u*|y)(\w+)/i;
+  var vowelsRE = /^[aeiou]/i;
+  var consonantsRE = /^([bcdfghjklmnpqrstvwxz]+u*|y)(\w+)/i;
   var pigLatinWord = "";
 
-  if (vowelsRegEx.test(word)) {
+  if (vowelsRE.test(word)) {
     pigLatinWord = word + "ay";
   }
-  else if (consonantsRegEx.test(word)) {
-    pigLatinWord = word.replace(consonantsRegEx, "$2$1ay");
+  else if (consonantsRE.test(word)) {
+    pigLatinWord = word.replace(consonantsRE, "$2$1ay");
   }
-  return pigLatinWord;
+
+  return pigLatinWord.toLowerCase();
+};
+
+var pigLatinSentence = function(sentence) {
+  var words = sentence.split(" ");
+
+  return words.map(pigLatin).join(" ");
 };
