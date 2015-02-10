@@ -18,3 +18,15 @@ var pigLatinSentence = function(sentence) {
 
   return words.map(pigLatin).join(" ");
 };
+
+$(document).ready(function() {
+  $("form#pig_latin").submit(function(event) {
+    var normalString = $("input#normal_string").val();
+    var pigLatinString = pigLatinSentence(normalString);
+
+    $(".in-pig-latin").text(pigLatinString);
+
+    $("#result").show();
+    event.preventDefault();
+  });
+});
